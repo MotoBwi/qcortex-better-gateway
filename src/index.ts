@@ -9,7 +9,7 @@ import { createTerminalManager } from "./terminal-api.js";
 
 function loadGatewayToken(): string | null {
   try {
-    const configPath = join(process.env.HOME || "/root", ".openclaw", "openclaw.json");
+    const configPath = join(process.env.HOME || "/root", ".qcortex", "qcortex.json");
     const config = JSON.parse(readFileSync(configPath, "utf-8"));
     return config?.gateway?.auth?.token ?? null;
   } catch {
@@ -121,7 +121,7 @@ function generateLandingPage(config: PluginConfig, gatewayHost: string): string 
 </head>
 <body>
   <h1>🔌 Better Gateway</h1>
-  <p>Auto-reconnect enhancement for OpenClaw Gateway UI</p>
+  <p>Auto-reconnect enhancement for QCortex Gateway UI</p>
   
   <h2>Features</h2>
   <div class="feature">Automatic WebSocket reconnection on disconnect</div>
@@ -191,7 +191,7 @@ DELETE /better-gateway/api/files?path=/test.md</pre>
   
   <hr style="margin: 40px 0; border-color: #333;">
   <p style="color: #666; font-size: 0.85em;">
-    <a href="https://github.com/ThisIsJeron/openclaw-better-gateway" style="color: #00d4ff;">GitHub</a> · 
+    <a href="https://github.com/MotoBwi/qcortex-better-gateway" style="color: #00d4ff;">GitHub</a> · 
     Config: reconnect=${config.reconnectIntervalMs}ms, maxAttempts=${config.maxReconnectAttempts}
   </p>
 </body>
@@ -202,9 +202,9 @@ function generateUserscript(config: PluginConfig, gatewayUrl: string): string {
   const script = loadInjectScript();
   return `// ==UserScript==
 // @name         Better Gateway - Auto Reconnect
-// @namespace    https://github.com/ThisIsJeron/openclaw-better-gateway
+// @namespace    https://github.com/MotoBwi/qcortex-better-gateway
 // @version      1.0.0
-// @description  Adds automatic WebSocket reconnection to OpenClaw Gateway UI
+// @description  Adds automatic WebSocket reconnection to QCortex Gateway UI
 // @match        ${gatewayUrl}/*
 // @grant        none
 // ==/UserScript==
@@ -218,8 +218,8 @@ ${script}`;
 }
 
 export default {
-  // ID must match openclaw.plugin.json
-  id: "openclaw-better-gateway",
+  // ID must match qcortex.plugin.json
+  id: "qcortex-better-gateway",
   name: "Better Gateway",
 
   configSchema: {

@@ -514,7 +514,7 @@ describe("inject.js - WebSocket auto-reconnect", () => {
 
   describe("compose layout: Send/Stop proxy button", () => {
     /**
-     * Creates the DOM structure that mirrors what the OpenClaw gateway
+     * Creates the DOM structure that mirrors what the QCortex gateway
      * actually renders for the chat compose area:
      *
      *   <main class="content">

@@ -1,5 +1,5 @@
 {
-  "id": "openclaw-better-gateway",
+  "id": "qcortex-better-gateway",
   "name": "Better Gateway",
   "version": "1.2.5",
   "description": "Enhanced gateway UI with auto-reconnect, WebSocket handling, and File API",

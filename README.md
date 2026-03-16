@@ -1,10 +1,10 @@
-# OpenClaw Better Gateway
+# QCortex Better Gateway
 
-An OpenClaw plugin that turns the Gateway into a **full-featured workspace** — resilient chat, embedded IDE, browser terminal, and file API, all in one tab.
+A QCortex plugin that turns the Gateway into a **full-featured workspace** — resilient chat, embedded IDE, browser terminal, and file API, all in one tab.
 
 ## Why this plugin
 
-OpenClaw Gateway is great for chatting with models, but when sockets drop, you need to edit files, or you want a terminal — your flow breaks. **Better Gateway** keeps sessions alive and puts everything you need right inside the Gateway UI.
+QCortex Gateway is great for chatting with models, but when sockets drop, you need to edit files, or you want a terminal — your flow breaks. **Better Gateway** keeps sessions alive and puts everything you need right inside the Gateway UI.
 
 ## Features
 
@@ -31,7 +31,7 @@ OpenClaw Gateway is great for chatting with models, but when sockets drop, you n
 - **xterm.js frontend** — 256-color support, scrollback, clickable links, proper resize handling
 - **SSE + POST transport** — runs entirely on the main gateway port; no extra ports, no extra SSH tunnel config
 - **Gateway-native navigation** — CLI nav item; click for split view (terminal + chat), Shift+click for terminal-only
-- **Keyboard shortcuts** — Ctrl+\` toggles terminal, Ctrl+L toggles chat sidebar
+- **Keyboard shortcuts** — Ctrl+` toggles terminal, Ctrl+L toggles chat sidebar
 
 ### File API
 
@@ -43,7 +43,7 @@ OpenClaw Gateway is great for chatting with models, but when sockets drop, you n
 | Shortcut | Action |
 |----------|--------|
 | Ctrl+L | Toggle chat sidebar (works from IDE and terminal) |
-| Ctrl+\` | Toggle terminal |
+| Ctrl+` | Toggle terminal |
 | Shift+click IDE | IDE fullscreen |
 | Shift+click CLI | Terminal fullscreen |
 
@@ -52,7 +52,7 @@ OpenClaw Gateway is great for chatting with models, but when sockets drop, you n
 ## Installation
 
 ```bash
-openclaw plugins install @thisisjeron/openclaw-better-gateway
+qcortex plugins install @thisisjeron/qcortex-better-gateway
 ```
 
 Then restart your gateway.
@@ -60,10 +60,10 @@ Then restart your gateway.
 ### From source
 
 ```bash
-git clone https://github.com/ThisIsJeron/openclaw-better-gateway.git
-cd openclaw-better-gateway
+git clone https://github.com/MotoBwi/qcortex-better-gateway.git
+cd qcortex-better-gateway
 npm install && npm run build
-openclaw plugins install -l .
+qcortex plugins install -l .
 ```
 
 **Note:** The terminal feature requires `node-pty` (native module). It's listed as an optional dependency — if it fails to compile, everything else still works, and the terminal page will tell you what's missing.
@@ -96,13 +96,13 @@ https://<YOUR_GATEWAY>/better-gateway/
 
 ## Configuration
 
-In your OpenClaw config (`openclaw.json`):
+In your QCortex config (`qcortex.json`):
 
 ```json
 {
   "plugins": {
     "entries": {
-      "openclaw-better-gateway": {
+      "qcortex-better-gateway": {
         "enabled": true,
         "reconnectIntervalMs": 3000,
         "maxReconnectAttempts": 10,
@@ -149,4 +149,4 @@ MIT
 
 ---
 
-Built with :paw_prints: by [ThisIsJeron](https://github.com/ThisIsJeron) and Clawd
+Built with :paw_prints: by [MotoBwi](https://github.com/MotoBwi)

@@ -22,7 +22,7 @@ const DEFAULT_MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
  * Accepts:
  * - workspace-relative paths (e.g. "projects/foo")
  * - paths prefixed with "workspace/" (e.g. "workspace/projects/foo")
- * - absolute paths inside workspaceDir (e.g. "/root/.openclaw/workspace/projects/foo")
+ * - absolute paths inside workspaceDir (e.g. "/root/.qcortex/workspace/projects/foo")
  */
 function resolveWorkspacePath(workspaceDir: string, requestedPath: string): string | null {
   if (requestedPath.includes("\0")) {

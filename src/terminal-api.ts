@@ -50,7 +50,7 @@ interface TerminalLogger {
 // ---------------------------------------------------------------------------
 // Cached dynamic import for node-pty
 //
-// When OpenClaw loads plugins via jiti, bare `import("node-pty")` resolves
+// When QCortex loads plugins via jiti, bare `import("node-pty")` resolves
 // from the *gateway's* node_modules, not the plugin's. We use `createRequire`
 // anchored at this file's location to force resolution from the plugin's own
 // node_modules, then fall back to a bare dynamic import() for environments

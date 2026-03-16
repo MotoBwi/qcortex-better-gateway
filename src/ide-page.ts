@@ -741,9 +741,9 @@ export function generateIdePage(config: Partial<IdePageConfig> = {}): string {
       if (!path || path === '/' || path === '.') return '/';
       let normalized = String(path).trim().split(String.fromCharCode(92)).join('/');
 
-      // Accept absolute workspace paths (e.g. /root/.openclaw/workspace/projects/foo)
-      const absWorkspacePrefix = '/root/.openclaw/workspace/';
-      if (normalized === '/root/.openclaw/workspace') return '/';
+      // Accept absolute workspace paths (e.g. /root/.qcortex/workspace/projects/foo)
+      const absWorkspacePrefix = '/root/.qcortex/workspace/';
+      if (normalized === '/root/.qcortex/workspace') return '/';
       if (normalized.startsWith(absWorkspacePrefix)) {
         normalized = normalized.slice(absWorkspacePrefix.length);
       }

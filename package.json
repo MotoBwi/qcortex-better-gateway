@@ -1,40 +1,40 @@
 {
-  "name": "@thisisjeron/openclaw-better-gateway",
+  "name": "@sbapan/qcortex-better-gateway",
   "version": "1.2.5",
-  "description": "OpenClaw plugin that enhances the gateway UI with auto-reconnect and connection monitoring",
+  "description": "QCortex plugin that enhances the gateway UI with auto-reconnect and connection monitoring",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc && cp src/inject.js dist/inject.js",
-    "deploy": "npm run build && cp -r dist/* ../../../extensions/openclaw-better-gateway/dist/ && cp src/inject.js ../../../extensions/openclaw-better-gateway/dist/inject.js && echo 'Deployed to extensions. Restart gateway to apply.'",
+    "deploy": "npm run build && cp -r dist/* ../../../extensions/qcortex-better-gateway/dist/ && cp src/inject.js ../../../extensions/qcortex-better-gateway/dist/inject.js && echo 'Deployed to extensions. Restart gateway to apply.'",
     "dev": "tsc --watch",
     "clean": "rm -rf dist",
     "test": "vitest run",
     "test:watch": "vitest",
     "prepublishOnly": "npm run build",
-    "release": "node -e \"const v=process.argv[1]; if(!v){console.error('Usage: npm run release -- X.Y.Z');process.exit(1)} const fs=require('fs'); const pkg=JSON.parse(fs.readFileSync('package.json','utf8')); pkg.version=v; fs.writeFileSync('package.json',JSON.stringify(pkg,null,2)+'\\n'); const plug=JSON.parse(fs.readFileSync('openclaw.plugin.json','utf8')); plug.version=v; fs.writeFileSync('openclaw.plugin.json',JSON.stringify(plug,null,2)+'\\n'); console.log('Updated package.json and openclaw.plugin.json to v'+v);\" --"
+    "release": "node -e \"const v=process.argv[1]; if(!v){console.error('Usage: npm run release -- X.Y.Z');process.exit(1)} const fs=require('fs'); const pkg=JSON.parse(fs.readFileSync('package.json','utf8')); pkg.version=v; fs.writeFileSync('package.json',JSON.stringify(pkg,null,2)+'\\n'); const plug=JSON.parse(fs.readFileSync('qcortex.plugin.json','utf8')); plug.version=v; fs.writeFileSync('qcortex.plugin.json',JSON.stringify(plug,null,2)+'\\n'); console.log('Updated package.json and qcortex.plugin.json to v'+v);\" --"
   },
   "keywords": [
-    "openclaw",
-    "openclaw-plugin",
+    "qcortex",
+    "qcortex-plugin",
     "gateway",
     "websocket",
     "auto-reconnect"
   ],
-  "author": "ThisIsJeron",
+  "author": "MotoBwi",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ThisIsJeron/openclaw-better-gateway.git"
+    "url": "https://github.com/MotoBwi/qcortex-better-gateway.git"
   },
   "bugs": {
-    "url": "https://github.com/ThisIsJeron/openclaw-better-gateway/issues"
+    "url": "https://github.com/MotoBwi/qcortex-better-gateway/issues"
   },
-  "homepage": "https://github.com/ThisIsJeron/openclaw-better-gateway#readme",
+  "homepage": "https://github.com/MotoBwi/qcortex-better-gateway#readme",
   "files": [
     "dist",
     "!dist/**/*.map",
-    "openclaw.plugin.json",
+    "qcortex.plugin.json",
     "README.md"
   ],
   "optionalDependencies": {
@@ -46,7 +46,7 @@
     "typescript": "^5.5.0",
     "vitest": "^3.0.0"
   },
-  "openclaw": {
+  "qcortex": {
     "extensions": [
       "dist/index.js"
     ]

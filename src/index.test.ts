@@ -22,7 +22,7 @@ import plugin from "./index.js";
 describe("Better Gateway Plugin", () => {
   describe("plugin metadata", () => {
     it("should have correct id", () => {
-      expect(plugin.id).toBe("openclaw-better-gateway");
+      expect(plugin.id).toBe("qcortex-better-gateway");
     });
 
     it("should have correct name", () => {
