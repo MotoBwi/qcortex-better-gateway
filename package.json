@@ -1,6 +1,6 @@
 {
   "name": "@sbapan/qcortex-better-gateway",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "QCortex plugin that enhances the gateway UI with auto-reconnect and connection monitoring",
   "type": "module",
   "main": "dist/index.js",
