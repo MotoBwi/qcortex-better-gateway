@@ -52,7 +52,7 @@ QCortex Gateway is great for chatting with models, but when sockets drop, you ne
 ## Installation
 
 ```bash
-qcortex plugins install @thisisjeron/qcortex-better-gateway
+qcortex plugins install @sbapan/qcortex-better-gateway
 ```
 
 Then restart your gateway.
